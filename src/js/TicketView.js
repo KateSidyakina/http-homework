@@ -52,7 +52,7 @@ export default class TicketView {
     }
   }
 
-  handleStatusTicketClick(button, e) {
+  handleStatusTicketClick(button) {
     app.ticketService.get(button.dataset.id, (_, response) => {
       const updatedTicket = Object.assign({}, response, {
         status: !response.status,
